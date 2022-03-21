@@ -329,6 +329,7 @@
             this.BorderlessForm.DockIndicatorTransparencyValue = 0.6D;
             this.BorderlessForm.DragForm = false;
             this.BorderlessForm.ResizeForm = false;
+            this.BorderlessForm.TransparentWhileDrag = true;
             // 
             // WindowBar
             // 
