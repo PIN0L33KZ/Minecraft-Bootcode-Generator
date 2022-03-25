@@ -300,8 +300,8 @@
             this.AboutText.Name = "AboutText";
             this.AboutText.Size = new System.Drawing.Size(353, 119);
             this.AboutText.TabIndex = 0;
-            this.AboutText.Text = "Version: 1.0.2.10\r\nSprache: Deutsch (German)\r\n\r\nCopyright\r\nEntwickler: xcFr3sh\r\nF" +
-    "rameworks: Winforms - Microsoft && Guna.UI2 - Sobatdata\r\nIcons: Icons8.com";
+            this.AboutText.Text = "Version: $version\r\n Sprache: Deutsch (German)\r\n\r\nCopyright\r\nEntwickler: xcFr3sh\r\n" +
+    "Frameworks: Winforms - Microsoft && Guna.UI2 - Sobatdata\r\nIcons: Icons8.com";
             // 
             // AboutTitle
             // 

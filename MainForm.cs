@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Reflection;
 using System.Windows.Forms;
 using Minecraft_Bootcode_Generator.Generator;
 
@@ -7,10 +8,13 @@ namespace Minecraft_Bootcode_Generator
     public partial class MainForm : Form
     {
         private readonly Bootcode bootcode = new Bootcode();
+        private readonly string assemblyVersion = Assembly.GetExecutingAssembly().GetName().Version.ToString();
 
         public MainForm()
         {
             InitializeComponent();
+            //Replace Version with Assembly Version
+            AboutText.Text = AboutText.Text.Replace("$version", assemblyVersion);
         }
 
         private void Generate_Win_Click(object sender, EventArgs e)
