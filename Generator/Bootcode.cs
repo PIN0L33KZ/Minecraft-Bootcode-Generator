@@ -56,30 +56,41 @@ namespace Minecraft_Bootcode_Generator.Generator
                     break;
             }
 
-            try
+            while(true)
             {
-                //Ask the user where he wants to save the File.
-                SaveFileDialog saveFileDialog = new SaveFileDialog()
+                try
                 {
-                    Filter = "Windows-Batch Befehlsdateien (*.bat)|*.bat|Windows-Command Befehlsdateien (*.cmd)|*.cmd",
-                    Title = "Wo möchtest du deine Boot-Code Datei speichern?",
-                    FileName = "Server-Starten.bat"
-                };
+                    //Ask the user where he wants to save the File.
+                    SaveFileDialog saveFileDialog = new SaveFileDialog()
+                    {
+                        Filter = "Windows-Batch Befehlsdateien (*.bat)|*.bat|Windows-Command Befehlsdateien (*.cmd)|*.cmd",
+                        Title = "Wo möchtest du deine Boot-Code Datei speichern?",
+                        FileName = "Server-Starten.bat"
+                    };
 
-                if(saveFileDialog.ShowDialog() == DialogResult.OK)
+                    if (saveFileDialog.ShowDialog() == DialogResult.OK)
+                    {
+                        //Write codeString into File.
+                        File.WriteAllText(saveFileDialog.FileName, codeString, Encoding.Default);
+
+                        //Show success message.
+                        MessageBox.Show("Deine Datei wurde erfolgreich gespeichert!", "Minecraft Bootcode Generator", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+
+                    //Leave loop if file is successfully written.
+                    break;
+                }
+                catch (Exception ex)
                 {
-                    //Write codeString into File.
-                    File.WriteAllText(saveFileDialog.FileName, codeString, Encoding.Default);
-
-                    //Show success message.
-                    MessageBox.Show("Deine Datei wurde erfolgreich gespeichert!", "Minecraft Bootcode Generator", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    //Show error message.
+                    if(MessageBox.Show(ex.Message, "Minecraft Bootcode Generator", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error) == DialogResult.Cancel)
+                    {
+                        //Leave loop if user canceled the retry.
+                        break;
+                    }
                 }
             }
-            catch (Exception ex)
-            {
-                //Show error message.
-                MessageBox.Show(ex.Message, "Minecraft Bootcode Generator", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+            
         }
     }
 }

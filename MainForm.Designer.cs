@@ -112,12 +112,12 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.Generate_Win.Animated = true;
             this.Generate_Win.BorderRadius = 5;
-            this.Generate_Win.Cursor = System.Windows.Forms.Cursors.Default;
+            this.Generate_Win.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Generate_Win.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.Generate_Win.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.Generate_Win.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.Generate_Win.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.Generate_Win.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(86)))), ((int)(((byte)(71)))), ((int)(((byte)(174)))));
+            this.Generate_Win.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(81)))), ((int)(((byte)(81)))));
             this.Generate_Win.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Generate_Win.ForeColor = System.Drawing.Color.White;
             this.Generate_Win.Location = new System.Drawing.Point(60, 265);
@@ -350,6 +350,7 @@
             this.ExitButton.BackColor = System.Drawing.Color.Transparent;
             this.ExitButton.BorderColor = System.Drawing.Color.Empty;
             this.ExitButton.ControlBoxStyle = Guna.UI2.WinForms.Enums.ControlBoxStyle.Custom;
+            this.ExitButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ExitButton.FillColor = System.Drawing.Color.Transparent;
             this.ExitButton.HoverState.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.ExitButton.IconColor = System.Drawing.Color.White;
